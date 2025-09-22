@@ -9,7 +9,7 @@
       Andrey A. Popov
     </H1>
     <H4>
-	    Assistant Professor
+	    Assistant Professor (U.S. Citizen)
 	</H4>
 	<A HREF="https://www.ics.hawaii.edu/">Information and Computer Sciences</A>
 	<BR>
@@ -38,13 +38,51 @@
 	<STRONG>Email:</STRONG> <A HREF="mailto:apopov@hawaii.edu">apopov@hawaii.edu</A>
 	<BR>
 	<STRONG>Office:</STRONG> POST 314G
+    
+    <H2>Research</H2>
+    <P>
+I am a computational scientist; I create methods that enable practitioners to make better predictions and make smarter<BR>
+decisions while using as little computational power as is practical. My primary research focus is on Bayesian inference <BR>
+and uncertainty quantification in the broad sense, with a particular focus on computational methods for uncertainty <BR>
+quantification in medium-to-large scale scientific problems such as multi-target tracking, sensor tasking, data <BR>
+assimilation, and equation discovery.   
+	</P>
+    <H3>Geometric Filtering and Target Tracking</H3>
+    <BR>
+    <IMG SRC="research/GEOMF.PNG">
+    <BR>
+    <P>
+We point a sensor at the night sky expecting to see a satellite. It is not there. As the absence of evidence is not the <BR>
+evidence of absence, we have to make use of this information to the maximal extend allowed, but how? My new approach <BR>
+reformulates Bayesian inference as a geometric problem of uniform distributions on convex H-polytopes and H-polyhedra. <BR>
+In this formulation Bayesian inference simply becomes matrix and vector concatenation. Extending this idea to mixture <BR>
+models of uniform distributions on H-polytopes allows us to create methods that converge to true Bayesian inference in <BR>
+distribution. This allows us to ``subtract out'' the sensor window from our measurement of uncertainty about where the <BR>
+satellite with little additional computational cost.      
+    </P>
+    <BR>
+    <H3>Normalizing flow discriminator-driven particle filtering</H3>
+    <BR>
+    <IMG SRC="research/DISCDIST.PNG">
+    <BR>
+    <P>
+Traditional particle filter resampling is driven only by some approximation of our posterior uncertainty. This ignores<BR>
+any prior knowledge that we have about the dynamics. In this project we aim to build normalizing flows that act as<BR>
+discriminators for the resampling step of a particle filter. The resampling that we propose will reduce the dimension of<BR>
+the resampling step from the dimension of Euclidean representation to that of the dimension of the underlying manifold<BR>
+of the dynamics.
+    </P>
+      
+      
     <H2>Prospective Students</H2>
-      Contact me by email or just stop by at my office!
+Contact me by email or just stop by at my office!
       
-      <H2>Media</H2>
-      <A HREF="https://oden.utexas.edu/news-and-events/news/Oden-institute-reseachers-win-jean-pierre-le-cadre-best-paper-award/">Oden article about me winning best paper at FUSION 2024</A>
       
+    <H2>Media</H2>
+    <A HREF="https://oden.utexas.edu/news-and-events/news/Oden-institute-reseachers-win-jean-pierre-le-cadre-best-paper-award/">Oden article about me winning best paper at FUSION 2024</A>
+    <BR>
+    <A HREF="https://www.outreach.hawaii.edu/artemis/">ARTEMIS Program main website</A>
 
       
-      <HR>
+    <HR>
 </BODY></HTML>
