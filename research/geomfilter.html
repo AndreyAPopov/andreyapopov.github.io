@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+  <HEAD>
+    <TITLE>Andrey A. Popov---UH Manoa</TITLE>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
+</HEAD>
+<BODY>
+    <A HREF="../index.html"><H1>
+      Back to Andrey A. Popov's Homepage
+    </H1></A>
+    <H3>Geometric Filtering and Target Tracking</H3>
+    <P>
+We point a sensor at the night sky expecting to see a satellite. It is not there. As the absence of evidence is not the <BR>
+evidence of absence, we have to make use of this information to the maximal extend allowed, but how? My new approach <BR>
+reformulates Bayesian inference as a geometric problem of uniform distributions on convex H-polytopes and H-polyhedra. <BR>
+In this formulation Bayesian inference simply becomes matrix and vector concatenation. Extending this idea to mixture <BR>
+models of uniform distributions on H-polytopes allows us to create methods that converge to true Bayesian inference in <BR>
+distribution. This allows us to ``subtract out'' the sensor window from our measurement of uncertainty about where the <BR>
+satellite with little additional computational cost.   
+    </P>
+    <BR>
+    <IMG SRC="GEOMF.png">
+    <BR>
+    <P>
+In the figure above, the top left panel is the action of the ensemble Gaussian mixture filter (EnGMF) on the banana problem <BR>
+which is a common problem in aerospace settings. The top right panel is a naive version of a bootstrap polytope filter, <BR>
+meaning that the filter simply assumes naive updates of our uncertainty from prior to posterior. The bottom left figure <BR>
+is a theoretical polytope filter that generalizes the convex polytope filter to polytope mixture models. The bottom right <BR>
+panel is a generalization of Kalman filter updates for polytopes and polytope mixtures, and is probably the most promising <BR>
+geometric filter at the moment.
+	</P>
+	<BR>
+	<IMG SRC="GEOMTI.PNG">
+	<BR>
+	<P>
+In the figure above a state (blue line) is evolved through a simple ordinary differential equation tracing the path along a <BR>
+circle. A measure of our uncertainty about this state is evolved through a corresponding polytope tangent linear model (PTLM)<BR>
+represented by the purple square.
+	</P>
+	<BR>
+	<H3>Publications</H3>
+	<UL>
+	<LI><A HREF="https://www.researchgate.net/profile/Andrey-Popov-5/publication/395337901_Polytope_Flow_Filtering/links/68be00576f87c42f3b90b27b/Polytope-Flow-Filtering.pdf">
+	Popov, Andrey A. "Polytope Flow Filtering"",
+	2025 IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems (MFI), 2025
+	</A></LI>
+	<LI><A HREF="https://arxiv.org/abs/2504.07084">
+	Popov, Andrey A. "A geometric ensemble method for Bayesian inference.", arXiv preprint arXiv:2504.07084 (2025).
+	</A></LI>
+	</UL>
+    <HR>
+</BODY></HTML>
