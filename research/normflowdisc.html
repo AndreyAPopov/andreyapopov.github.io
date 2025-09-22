@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+  <HEAD>
+    <TITLE>Andrey A. Popov---UH Manoa</TITLE>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
+</HEAD>
+<BODY>
+    <A HREF="../index.html"><H1>
+      Back to Andrey A. Popov's Homepage
+    </H1></A>
+    <H3>Normalizing flow discriminator-driven particle filtering</H3></A>
+    <P>
+Traditional particle filter resampling is driven only by some approximation of our posterior uncertainty. This ignores<BR>
+any prior knowledge that we have about the dynamics. In this project we aim to build normalizing flows that act as<BR>
+discriminators for the resampling step of a particle filter. The resampling that we propose will reduce the dimension of<BR>
+the resampling step from the dimension of Euclidean representation to that of the dimension of the underlying manifold<BR>
+of the dynamics.
+    </P>
+    <BR>
+    <IMG SRC="DISCDIST.PNG">
+    <BR>
+    <P>
+In the figure above, the left panel has the three standard deviations of a Gaussian distribution in blue, and a <BR>
+empirically known discriminator representing the attractor of the Ikeda map represented by the yellow shaded region. The <BR>
+Gaussian distribution describes our prior uncertainty about the state of some system (like the position of a target) and <BR>
+the yellow outline describes our prior uncertainty about the valid states on the Ikeda map attractor. The right panel <BR>
+represents our combined uncertainty, which is a highly non-Gaussian distribution.
+	</P>
+	<P>
+The Gaussian distribution can be generalized to any distribution, which is typically a mixture model in the case of an <BR>
+ensemble mixture model filter, and the discriminator can be approximated from data using a normalizing flow. A normalizing<BR>
+flow is a type of data driven model ("neural network" in "machine learning" terms) that learns to transform between a simple<BR>
+distribution such as the Epanechnikov distribution, and a complex distribution like that of the distribution of induced by <BR>
+a chaotic dynamical system. Normalizing flows are invertible, thus inducing a discriminator when the initial distribution is<BR>
+compactly supported, such is the case with the Epanechnikov distribution.
+	</P>
+	<BR>
+	<H3>Publications</H3>
+	<P>Stay tuned!</P>
+    <HR>
+</BODY></HTML>
