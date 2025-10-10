@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+  <HEAD>
+    <TITLE>Andrey A. Popov---UH Manoa</TITLE>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
+</HEAD>
+<BODY>
+    <A HREF="../index.html"><H1>
+      Back to Andrey A. Popov's Homepage
+    </H1></A>
+    <H3>Multifidelity Inference</H3>
+    <P>
+How can we make use of computer models that are untrustworthy, like those created by data-driven methods such as neural<BR>
+networks? Multifidelity and model forest methods build a hierarchy of models where the principal, top-level, model is <BR>
+based on theory and expert understanding, meaning that it is trustworthy. The subsequent lower level models are all less<BR>
+trustworthy than the principal model, meaning that these so-called ancillary models can for-go theory and instead be based<BR>
+on data. Models such as neural-networks, and reduced-order models can be very cheap for the predictive power that they<BR>
+provide, but are much less interpretable and much less trustworthy.
+    </P>
+    <BR>
+    <IMG SRC="MULTFID.PNG">
+    <BR>
+    <P>
+In the figure above, the bifidelity ensemble filtering architecture is described. Prior information is forecasted through<BR>
+two different models. The first being a trustworthy "supervisor" model, with the second being an untrustworthy "subordinate"<BR>
+model. That information is combined into one source of information, begetting the total prior information. Observations from<BR>
+sensors are then filtered together with this total prior information to beget our posterior information. Samples from this<BR>
+total posterior information are taken (through either deterministic of stochastic means) and the cycle repeats.
+	</P>
+	<BR>
+	<IMG SRC="BIFIDENKF.PNG">
+    <BR>
+    <P>
+In the figure above, the bifidelity ensemble Kalman filter architecture with reduced order modeling is described. The top-level<BR>
+full order model has two samples which are transformed into the space of the reduced order model, creating what is known as a<BR>
+control variate. The information from the full order model and the 12 samples of the reduced order model is coupled through the<BR>
+use of this control variate, and a Kalman gain is constructed. This Kalman gain is used to update the full order model and<BR>
+reduced order model ensembles. The ensemble members are propagated and the cycle repeats.
+	</P>
+	<BR>
+	<IMG SRC="FORESTENKF.PNG">
+    <BR>
+    <P>
+In the figure above, the model forest ensemble Kalman filter architecture is described. This generalizes the above bifidelity<BR>
+ensemble Kalman filter by having the possibility of multiple top-level full order models, and multiple layers and branches of<BR>
+lower-level subordinate reduced order models.
+	</P>
+	<BR>
+	<H3>Publications</H3>
+	<UL>
+	<LI><A HREF="https://epubs.siam.org/doi/abs/10.1137/20M1349965">
+	Popov, Andrey A., Changhong Mou, Adrian Sandu, and Traian Iliescu. 
+	"A multifidelity ensemble Kalman filter with reduced order control variates." 
+	SIAM Journal on Scientific Computing 43, no. 2 (2021): A1134-A1162.
+	</A></LI>
+	<LI><A HREF="https://link.springer.com/chapter/10.1007/978-3-030-77722-7_2">
+	Popov, Andrey A., and Adrian Sandu. "Multifidelity data assimilation for physical systems." 
+	In Data Assimilation for Atmospheric, Oceanic and Hydrologic Applications (Vol. IV), pp. 43-67. 
+	Cham: Springer International Publishing, 2022.
+	</A></LI>
+	<LI><A HREF="https://arxiv.org/pdf/2210.11971">
+	Popov, Andrey A., and Adrian Sandu. 
+	"The Model Forest Ensemble Kalman Filter." 
+	arXiv preprint arXiv:2210.11971 (2022).
+	</A></LI>
+	<LI><A HREF="https://books.google.com/books?hl=en&lr=&id=oculEAAAQBAJ&oi=fnd&pg=PA41&dq=popov+multifidelity&ots=Xk3lawzhOX&sig=H8Atfbeswk8O981NOqHmFrfHXio">
+	Popov, Andrey A., and Adrian Sandu. 
+	"Multifidelity ensemble Kalman filtering using surrogate models defined by theory-guided autoencoders." 
+	Data-driven modeling and optimization in fluid dynamics: From physics-based to machine learning approaches 16648714 (2023): 41.
+	</A></LI>
+	</UL>
+    <HR>
+</BODY></HTML>
