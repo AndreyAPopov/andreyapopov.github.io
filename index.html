@@ -49,11 +49,84 @@
 	</UL>
     
     <H2>Research</H2>
-	I am a computational scientist: my research focus is on creating computational methods for diverse and general sets of problems, 
+	I am a computational scientist: my research focus is on creating computational methods for diverse and general sets of problems, <BR>
 	from the more natural science applications like numerical weather prediction and space object tracking to more social problems like human mobility, and suicide prevention.
 
-	Selected Publications:
-	<A HREF="https://scholar.google.com/citations?user=G0nqXfoAAAAJ&amp;hl=en">Google Scholar</A>
+	<BR>
+	<H3>Multifidelity inference</H3>
+    <P>
+How can we make use of computer models that are untrustworthy, like those created by data-driven methods such as neural<BR>
+networks? Multifidelity and model forest methods build a hierarchy of models where the principal, top-level, model is <BR>
+based on theory and expert understanding, meaning that it is trustworthy. The subsequent lower level models are all less<BR>
+trustworthy than the principal model, meaning that these so-called ancillary models can for-go theory and instead be based<BR>
+on data. Models such as neural-networks, and reduced-order models can be very cheap for the predictive power that they<BR>
+provide, but are much less interpretable and much less trustworthy.
+    </P>
+    <BR>
+    <IMG SRC="research/MULTFID.PNG">
+    <BR>
+    <P>
+In the figure above, the bifidelity ensemble filtering architecture is described. Prior information is forecasted through<BR>
+two different models. The first being a trustworthy "supervisor" model, with the second being an untrustworthy "subordinate"<BR>
+model. That information is combined into one source of information, begetting the total prior information. Observations from<BR>
+sensors are then filtered together with this total prior information to beget our posterior information. Samples from this<BR>
+total posterior information are taken (through either deterministic of stochastic means) and the cycle repeats.
+	</P>
+	<BR>
+	<IMG SRC="research/BIFIDENKF.PNG">
+    <BR>
+    <P>
+In the figure above, the bifidelity ensemble Kalman filter architecture with reduced order modeling is described. The top-level<BR>
+full order model has two samples which are transformed into the space of the reduced order model, creating what is known as a<BR>
+control variate. The information from the full order model and the 12 samples of the reduced order model is coupled through the<BR>
+use of this control variate, and a Kalman gain is constructed. This Kalman gain is used to update the full order model and<BR>
+reduced order model ensembles. The ensemble members are propagated and the cycle repeats.
+	</P>
+	<BR>
+	<IMG SRC="research/FORESTENKF.PNG">
+    <BR>
+    <P>
+In the figure above, the model forest ensemble Kalman filter architecture is described. This generalizes the above bifidelity<BR>
+ensemble Kalman filter by having the possibility of multiple top-level full order models, and multiple layers and branches of<BR>
+lower-level subordinate reduced order models.
+	</P>
+	<BR>
+	<H3>Publications</H3>
+	<UL>
+	<LI><A HREF="https://epubs.siam.org/doi/abs/10.1137/20M1349965">
+	Popov, Andrey A., Changhong Mou, Adrian Sandu, and Traian Iliescu. 
+	"A multifidelity ensemble Kalman filter with reduced order control variates." 
+	SIAM Journal on Scientific Computing 43, no. 2 (2021): A1134-A1162.
+	</A></LI>
+	<LI><A HREF="https://link.springer.com/chapter/10.1007/978-3-030-77722-7_2">
+	Popov, Andrey A., and Adrian Sandu. "Multifidelity data assimilation for physical systems." 
+	In Data Assimilation for Atmospheric, Oceanic and Hydrologic Applications (Vol. IV), pp. 43-67. 
+	Cham: Springer International Publishing, 2022.
+	</A></LI>
+	<LI><A HREF="https://arxiv.org/pdf/2210.11971">
+	Popov, Andrey A., and Adrian Sandu. 
+	"The Model Forest Ensemble Kalman Filter." 
+	arXiv preprint arXiv:2210.11971 (2022).
+	</A></LI>
+	<LI><A HREF="https://books.google.com/books?hl=en&lr=&id=oculEAAAQBAJ&oi=fnd&pg=PA41&dq=popov+multifidelity&ots=Xk3lawzhOX&sig=H8Atfbeswk8O981NOqHmFrfHXio">
+	Popov, Andrey A., and Adrian Sandu. 
+	"Multifidelity ensemble Kalman filtering using surrogate models defined by theory-guided autoencoders." 
+	Data-driven modeling and optimization in fluid dynamics: From physics-based to machine learning approaches 16648714 (2023): 41.
+	</A></LI>
+	</UL>
+
+	<H3>Aerospace Applications</H3>
+	A lot of my work has applications to aerospace applications<BR>
+	<H4>Publications</H4>
+	<UL>
+	<LI>"Giraldo-Grueso, Felipe; Popov, Andrey A; Zanetti, Renato; ",Precision Mars Entry Navigation with Atmospheric Density Adaptation via Neural Networks,Journal of Aerospace Information Systems,21,12,982-995,2024,American Institute of Aeronautics and Astronautics</LI>
+	<LI>"Durant, Dalton; Popov, Andrey A; Zanetti, Renato; ",What are You Weighting For? Improved Weights for Gaussian Mixture Filtering With Application to Cislunar Orbit Determination,arXiv preprint arXiv:2405.11081,2024,</LI>
+	<LI>"Giraldo-Grueso, Felipe; Popov, Andrey A; Zanetti, Renato; ",Gaussian Mixture-Based Point Mass Filtering With Applications to Terrain-Relative Navigation,IEEE Transactions on Aerospace and Electronic Systems,2025,IEEE</LI>
+	<LI>"Popov, Andrey A; Zanetti, Renato; ",Deterministic Optimal Transport-based Gaussian Mixture Particle Filtering for Verifiable Applications,arXiv preprint arXiv:2501.17302,2025,</LI>
+	<LI>"Giraldo-Grueso, Felipe; Popov, Andrey A; Hanebeck, Uwe D; Zanetti, Renato; ",Optimal Sampling for Point Mass Filtering with Applications to Cislunar Orbit Determination,The Journal of the Astronautical Sciences,72,5,44,2025,Springer US New York</LI>
+	<LI>"Durant, Dalton; Popov, Andrey A; DeMars, Kyle J; Zanetti, Renato; ",A Framework for Batch Processing Tracklets in the GM-PHD Filter,Advances in Space Research,2025,Elsevier</LI>
+	<LI>"Giraldo-Grueso, Felipe; Popov, Andrey A; Rea, Jeremy R; Zanetti, Renato; ",Adaptive Atmospheric Entry Guidance via Neural Networks,"Journal of Guidance, Control, and Dynamics",2025,American Institute of Aeronautics and Astronautics</LI>
+	</UL>
 	
       
     <H2>Prospective Students</H2>
